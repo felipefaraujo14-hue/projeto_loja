@@ -1,5 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+}
+/*variaveis*/
+:root{
+    --cor01: white;
+    --cor02: blue;
+    --cor02: yellow;
+    --branca: white;
+}
+
+/*Formatando a tag main pelo id geral*/
+#geral{
+    margin: 20px;
+}
+
+/*Formatando o cabeçalho*/
+#cabecalho{
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    padding: 0px 20px;
+    height: 60px;
+}
+
+/*Configurando menu na horizontal*/
+#menu ul{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+#menu ul img{
+    width: 25px;
+    height: 25px;
 }
