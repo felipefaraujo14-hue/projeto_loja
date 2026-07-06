@@ -1,0 +1,156 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    min-height:100vh;
+}
+
+/*MENU*/
+
+nav{
+    background:#111;
+    padding:18px;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00c853;
+}
+
+/*CONTAINER*/
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:calc(100vh - 70px);
+    padding:20px;
+}
+
+/*LOGIN*/
+
+.login-box{
+    background:white;
+    width:100%;
+    max-width:420px;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.login-box h1{
+    color:#00c853;
+    margin-bottom:10px;
+    font-size:32px;
+}
+
+.login-box p{
+    color:#555;
+    margin-bottom:25px;
+}
+
+/*CAMPOS*/
+
+.campo{
+    text-align:left;
+    margin-bottom:20px;
+}
+
+.campo label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.campo input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.campo input:focus{
+    border-color:#00c853;
+    box-shadow:0 0 8px rgba(0,200,83,.3);
+}
+
+/*BOTÃO*/
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#00c853;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#009624;
+    transform:translateY(-2px);
+}
+
+/*CADASTRO*/
+
+.cadastro{
+    margin-top:20px;
+}
+
+.cadastro p{
+    margin:0;
+    color:#444;
+}
+
+.cadastro a{
+    margin-left:5px;
+    color:#00c853;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.cadastro a:hover{
+    text-decoration:underline;
+}
+
+/*RESPONSIVO*/
+@media(max-width:768px){
+
+    nav{
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    .login-box{
+        padding:30px;
+    }
+
+    .login-box h1{
+        font-size:28px;
+    }
+
+}
