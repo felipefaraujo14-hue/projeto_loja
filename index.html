@@ -25,7 +25,6 @@
                     <li><a href="paginas/login.html">Login</a></li>
                     <li><a href="paginas/cadastro.html">Cadastro</a></li>
                     <li><a href="paginas/sobre.html">Sobre</a></li>
-                    <li><a href="paginas/produtos.html">Produtos</a></li>
                     <li><a href="paginas/carrinho.html">Carrinho</a></li>
                 </ul>
             </nav>
@@ -42,14 +41,20 @@
                 <img src="image/arg.png" alt="Camisa Argentina">
                 <p>Camisa Oficial Argentina</p>
                 <h2>R$ 399,99</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(1, 'Camisa Oficial Argentina', 399.99)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
                 <img src="image/bola.png" alt="Bola de Futebol">
                 <p>Bola de Futebol</p>
                 <h2>R$ 200,00</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(2, 'Bola de Futebol', 200.00)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
@@ -57,28 +62,41 @@
                     alt="Camisa Flamengo">
                 <p>Camisa Flamengo</p>
                 <h2>R$ 379,99</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(3, 'Camisa Flamengo', 379.99)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
                 <img src="image/gcfhfyd.png" alt="Camisa França Branca">
                 <p>Camisa Branca França</p>
                 <h2>R$ 179,90</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(4, 'Camisa Branca França', 179.90)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
-                <img src="image/camisa_futebol_manga_longa_argentina_i_2026.png" alt="Camisa Argentina Manga Longa">
+                <img src="image/camisa_futebol_manga_longa_argentina_i_2026.png"
+                    alt="Camisa Argentina Manga Longa">
                 <p>Camisa Manga Longa Argentina</p>
                 <h2>R$ 399,90</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(5, 'Camisa Manga Longa Argentina', 399.90)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
                 <img src="image/brazzil.png" alt="Camisa Brasil">
                 <p>Camisa Brasil Azul</p>
                 <h2>R$ 200,00</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(6, 'Camisa Brasil Azul', 200.00)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
@@ -86,7 +104,10 @@
                     alt="Chuteira Puma">
                 <p>Chuteira Puma</p>
                 <h2>R$ 200,00</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(7, 'Chuteira Puma', 200.00)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
@@ -94,7 +115,10 @@
                     alt="Coletes de Treino">
                 <p>5 Coletes de Treino</p>
                 <h2>R$ 200,00</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(8, '5 Coletes de Treino', 200.00)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
@@ -102,14 +126,21 @@
                     alt="Camisa Flamengo Branca">
                 <p>Camisa Branca Flamengo</p>
                 <h2>R$ 200,00</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(9, 'Camisa Branca Flamengo', 200.00)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
-                <img src="image/camisa_franca_semifinal_copa_do_mundo_2022_uniforme.png" alt="Camisa França">
+                <img src="image/camisa_franca_semifinal_copa_do_mundo_2022_uniforme.png"
+                    alt="Camisa França">
                 <p>Camisa França</p>
                 <h2>R$ 200,00</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(10, 'Camisa França', 200.00)">
+                    Adicionar
+                </button>
             </div>
 
             <div class="card">
@@ -117,7 +148,10 @@
                     alt="Uniforme Personalizado">
                 <p>Uniforme Personalizado</p>
                 <h2>R$ 200,00</h2>
-                <button class="btn-add">Adicionar</button>
+                <button class="btn-add"
+                    onclick="adicionarCarrinho(11, 'Uniforme Personalizado', 200.00)">
+                    Adicionar
+                </button>
             </div>
 
         </section>
@@ -128,6 +162,8 @@
         </footer>
 
     </main>
+
+    <script src="js/script.js"></script>
 
 </body>
 
