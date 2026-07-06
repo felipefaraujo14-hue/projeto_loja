@@ -4,119 +4,172 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #d5e2ff, #1e293b);
+    background: linear-gradient(135deg, #1e293b, #0f172a); /* Invertido para o texto branco contrastar melhor */
     color: #fff;
     min-height: 100vh;
     padding: 40px 20px;
 }
 
-h1{
+h1 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2.8rem;
-    color: #000000;
+    color: #fff; /* Mudado para branco para aparecer no fundo escuro */
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
-#listaCarrinho {
-    max-width: 900px;
+/* Container Principal para alinhar Carrinho + Resumo */
+.container {
+    display: flex;
+    max-width: 1200px;
     margin: 0 auto;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+#listaCarrinho {
+    flex: 2; /* Ocupa mais espaço */
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Bloco de Resumo / Lateral */
+.resumo {
+    flex: 1; /* Ocupa menos espaço */
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 25px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-/*Produtos*/
-.produto {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px;
-    margin-bottom: 15px;
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 12px;
-    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.produto:hover {
-    transform: translateY(-3px);
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.produto h3 {
-    color: #000000;
-    margin-bottom: 5px;
-}
-
-.produto p {
-    color: #d1d5db;
-}
-
-/* Total */
-#total {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 2rem;
-    color: #000000;
-    font-weight: bold;
-}
-
-/* Botão continuar comprando */
-a {
-    display: block;
-    width: fit-content;
-    margin: 30px auto;
-    padding: 14px 30px;
-    background: #77ff89;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 10px;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
-}
-
-a:hover {
-    background: #000000;
-    transform: translateY(-2px);
-}
-/*Carrinho vazio*/
-.vazio {
-    text-align: center;
-    font-size: 1.2rem;
+.resumo h3 {
+    font-size: 1.1rem;
     color: #cbd5e1;
-    padding: 30px;
+    margin-bottom: 5px;
+    margin-top: 15px;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    .produto {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    #total {
-        font-size: 1.5rem;
-    }
+.resumo p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #4ade80; /* Verde para destacar valores */
+    margin-bottom: 15px;
 }
 
-button{
-    width: fit-content;
-    margin: 30px auto;
-    padding: 14px 30px;
+/* Estilização dos Itens Gerados pelo JavaScript */
+.item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.item img {
+    border-radius: 10px;
+    object-fit: cover;
+    background: white;
+}
+
+.item .dados {
+    flex: 1;
+}
+
+.item h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.item p {
+    color: #cbd5e1;
+    margin: 4px 0;
+}
+
+/* Inputs de Texto e Número */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="number"] {
+    width: 80px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Divisória */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 15px 0;
+}
+
+/* Botões Gerais */
+button, .btn-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px;
     background: #22c55e;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
     border-radius: 10px;
+    border: none;
+    cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+button:hover, .btn-link:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+}
+
+/* Customização para o botão de Continuar Comprando (Link) */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    #listaCarrinho, .resumo {
+        width: 100%;
+    }
+
+    .item {
+        flex-direction: column;
+        text-align: center;
+    }
 }

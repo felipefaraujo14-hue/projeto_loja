@@ -3,19 +3,62 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Carrinho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
 
     <link rel="stylesheet" href="../css/style.carrinho.css">
 </head>
+
 <body>
 
     <h1>Meu Carrinho</h1>
 
-    <div id="listaCarrinho"></div>
+    <div class="container">
 
-    <h2 id="total"></h2>
+        <div id="listaCarrinho"></div>
 
-    <a href="../index.html">Continuar Comprando</a>
+        <div class="resumo">
+
+            <h3>CEP</h3>
+
+            <input
+                type="text"
+                id="cep"
+                placeholder="Digite seu CEP"
+            >
+
+            <br><br>
+
+            <button onclick="calcularFrete()">
+                Calcular Frete
+            </button>
+
+            <hr>
+
+            <h3>Total dos Produtos</h3>
+            <p id="valorProdutos">R$ 0,00</p>
+
+            <h3>Frete</h3>
+            <p id="valorFrete">R$ 0,00</p>
+
+            <h3>Total a Pagar</h3>
+            <p id="valorFinal">R$ 0,00</p>
+
+            <br>
+
+            <a href="../index.html">
+                <button>Continuar Comprando</button>
+            </a>
+
+            <br><br>
+
+            <button onclick="finalizarCompra()">
+                Finalizar Compra
+            </button>
+
+        </div>
+
+    </div>
 
     <script src="../js/carrinho.js"></script>
 
