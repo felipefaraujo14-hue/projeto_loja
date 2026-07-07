@@ -26,7 +26,7 @@ body {
 
 #cabecalho {
     width: 100%;
-    background: #111;
+    background: #000000;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -197,4 +197,11 @@ body {
         height: 180px;
     }
 
+}
+
+
+#menu img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
