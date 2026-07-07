@@ -10,8 +10,10 @@
 }
 
 body {
-    background: #f5f5f5;
-    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e293b, #9db0dd); /* Invertido para o texto branco contrastar melhor */
+    color: #fff;
+    min-height: 100vh;
 }
 
 /*CONTAINER*/
@@ -98,6 +100,7 @@ body {
 
 .card {
     background: white;
+    color: #111;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .15);

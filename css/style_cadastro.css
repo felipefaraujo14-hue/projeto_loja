@@ -7,8 +7,10 @@
 
 
 body{
-    background:#f4f4f4;
-    color:#222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e293b, #9db0dd); /* Invertido para o texto branco contrastar melhor */
+    color: #000000;
+    min-height: 100vh;
 }
 
 
