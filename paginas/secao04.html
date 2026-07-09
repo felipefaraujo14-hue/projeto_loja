@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shorts - NextPlay Football</title>
+
+    <link rel="stylesheet" href="../css/style_secoes.css">
+    <link rel="shortcut icon" href="../image/logo.ico" type="image/x-icon">
+
+    <script src="../js/carrinho.js" defer></script>
 </head>
+
 <body>
-    
+
+    <main id="geral">
+
+        <header id="cabecalho">
+            <div id="logo">
+                <a href="../index.html">NextPlay Football</a>
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li>
+                        <a href="carrinho.html">
+                            <img src="../image/logos.ico/6493694.ico" alt="Carrinho" width="30">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="secoes-produtos">
+            <ul id="menu-secoes">
+                <li><a href="secao01.html" class="lnk-secao">Camisas</a></li>
+                <li><a href="secao02.html" class="lnk-secao">Chuteiras</a></li>
+                <li><a href="secao03.html" class="lnk-secao">Bolas</a></li>
+                <li><a href="secao05.html" class="lnk-secao">Acessórios</a></li>
+            </ul>
+        </section>
+
+        <section id="titulo-secao">
+            <h1>Shorts</h1>
+        </section>
+        <section id="cards">
+            <div class="card">
+                <img src="../image/short.png" alt="Short Masculino">
+                <p>Short Masculino</p>
+                <h2>R$ 50,00</h2>
+                <button class="btn-add" onclick="adicionarCarrinho(this, 13, 'Short Masculino', 50.00)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../image/short2.png" alt="Short Masculino Azul">
+                <p>Short Masculino Azul</p>
+                <h2>R$ 45,00</h2>
+                <button class="btn-add" onclick="adicionarCarrinho(this, 14, 'Short Masculino Azul', 45.00)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../image/short3.png" alt="Short Masculino Cinza">
+                <p>Short Masculino Cinza</p>
+                <h2>R$ 45,00</h2>
+                <button class="btn-add" onclick="adicionarCarrinho(this, 15, 'Short Masculino Cinza', 45.00)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../image/short4.png" alt="Short Masculino Branco">
+                <p>Short Masculino Branco</p>
+                <h2>R$ 45,00</h2>
+                <button class="btn-add" onclick="adicionarCarrinho(this, 16, 'Short Masculino Branco', 45.00)">
+                    Adicionar
+                </button>
+            </div>
+
+            <div class="card">
+                <img src="../image/short5.png" alt="Conjuto 7 Shorts">
+                <p>Conjuto 7 Shorts</p>
+                <h2>R$ 400,00</h2>
+                <button class="btn-add" onclick="adicionarCarrinho(this, 17, 'Conjuto 7 Shorts', 400.00)">
+                    Adicionar
+                </button>
+            </div>
+            <section>
+
+    </main>
 </body>
+
 </html>
