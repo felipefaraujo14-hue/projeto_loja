@@ -205,3 +205,22 @@ body {
     height: 35px;
     cursor: pointer;
 }
+
+/*Formatando o menu de seçoes*/
+#secoes-produtos{
+    width: 100%;
+    min-height: 100px;
+    background-color: #009624;
+    margin: 20px 0px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lnk-secoo:link, .lnk-secoo:visited{
+    text-decoration: none;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: aliceblue;
+}
