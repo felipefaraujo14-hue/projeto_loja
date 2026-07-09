@@ -1,11 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chuteiras - NextPlay Football</title>
+
+    <link rel="stylesheet" href="../css/style_secoes.css">
+    <link rel="shortcut icon" href="../image/logo.ico" type="image/x-icon">
+
+    <script src="../js/carrinho.js" defer></script>
 </head>
+
 <body>
-    
+
+    <main id="geral">
+
+        <header id="cabecalho">
+            <div id="logo">
+                <a href="../index.html">NextPlay Football</a>
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li>
+                        <a href="carrinho.html">
+                            <img src="../image/logos.ico/6493694.ico" alt="Carrinho" width="30">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="secoes-produtos">
+            <ul id="menu-secoes">
+                <li><a href="secao03.html" class="link-secao">Bolas</a></li>
+                <li><a href="secao04.html" class="link-secao">Shorts</a></li>
+                <li><a href="secao05.html" class="link-secao">Acessórios</a></li>
+            </ul>
+        </section>
+
+        <section id="titulo-secao">
+            <h1>Chuteiras</h1>
+        </section>
+        <section id="cards">
+            <div class="card">
+                <img src="../image/chuteira-puma-one-5-4-fg-ag-bdp-puma-bl-nr-red-pu-ag-38-105862--001038-105862--001038-1.png"
+                    alt="Chuteira Puma">
+                <p>Chuteira Puma</p>
+                <h2>R$ 200,00</h2>
+                <button class="btn-add" onclick="adicionarCarrinho(this, 7, 'Chuteira Puma', 200.00)">
+                    Adicionar
+                </button>
+            </div>
+            <section>
+
+    </main>
 </body>
+
 </html>
