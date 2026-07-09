@@ -206,21 +206,52 @@ body {
     cursor: pointer;
 }
 
-/*Formatando o menu de seçoes*/
-#secoes-produtos{
-    width: 100%;
-    min-height: 100px;
-    background-color: #009624;
-    margin: 20px 0px;
+/*seçoes de produtos*/
+
+#secoes-produtos {
+    width: 90%;
+    margin: 30px auto;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #000;
+    border-radius: 15px;
 }
 
-.lnk-secoo:link, .lnk-secoo:visited{
+
+/*Lista categoria*/
+
+#menu-secoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+/*Links*/
+
+.lnk-secao:link,
+.lnk-secao:visited {
     text-decoration: none;
-    font-size: 1.3em;
-    text-transform: uppercase;
-    color: aliceblue;
+    color: white;
+    padding: 12px 25px;
+    font-size: 18px;
+    display: block;
+}
+
+/* Responsivo*/
+
+@media(max-width:700px){
+    #secoes-produtos{
+        width:95%;
+    }
+
+    #menu-secoes{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .lnk-secao{
+        width:220px;
+        text-align:center;
+    }
 }
