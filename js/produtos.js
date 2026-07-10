@@ -1,32 +1,54 @@
 // Importando os produtos do arquivo lista_produtos.js
 import { produtos } from './lista_produtos.js'
 
-// Pegando elementos do DOM
 const sectionCards = document.querySelector('#cards')
 
-// carregando os cards
 const ListarProdutos = () => {
+
+    if (!sectionCards) return
 
     sectionCards.innerHTML = ''
 
-    produtos.forEach((elem, i) => {
+    const produtosExibir = typeof ID_SECAO !== 'undefined'
+            ? produtos.filter(produto => produto.id_secao === ID_SECAO)
+            : produtos
+
+    produtosExibir.forEach((elem) => {
 
         const divCard = document.createElement('div')
-        divCard.setAttribute('class', 'card')
+        divCard.classList.add('card')
+
+        // ajusta o caminho da imagem
+        const caminhoImagem =
+            typeof ID_SECAO !== 'undefined'
+                ? '../' + elem.caminho_imagem
+                : elem.caminho_imagem
 
         const imgCard = document.createElement('img')
-        imgCard.setAttribute('src', elem.caminho_imagem)
-        imgCard.setAttribute('alt', elem.descricao_produto)
+        imgCard.src = caminhoImagem
+        imgCard.alt = elem.descricao_produto
 
         const pCard = document.createElement('p')
-        pCard.innerHTML = elem.descricao_produto
+        pCard.textContent = elem.descricao_produto
 
         const h2Card = document.createElement('h2')
-        h2Card.innerHTML = `R$ ${parseFloat(elem.valor_unitario).toFixed(2).replace('.', ',')}`
+        h2Card.textContent =
+            `R$ ${parseFloat(elem.valor_unitario)
+                .toFixed(2)
+                .replace('.', ',')}`
 
         const btnCard = document.createElement('button')
-        btnCard.setAttribute('class', 'btn-add')
-        btnCard.innerHTML = 'Adicionar'
+        btnCard.classList.add('btn-add')
+        btnCard.textContent = 'Adicionar'
+
+        btnCard.addEventListener('click', () => {
+            adicionarCarrinho(
+                btnCard,
+                elem.id_produto,
+                elem.descricao_produto,
+                elem.valor_unitario
+            )
+        })
 
         divCard.appendChild(imgCard)
         divCard.appendChild(pCard)
@@ -34,7 +56,6 @@ const ListarProdutos = () => {
         divCard.appendChild(btnCard)
 
         sectionCards.appendChild(divCard)
-
     })
 }
 
