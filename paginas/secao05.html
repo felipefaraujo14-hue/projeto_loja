@@ -10,6 +10,12 @@
     <link rel="shortcut icon" href="../image/logo.ico" type="image/x-icon">
 
     <script src="../js/carrinho.js" defer></script>
+
+    <script>
+        const ID_SECAO = 5;
+    </script>
+
+<script src="../js/produtos.js" type="module" defer></script>
 </head>
 
 <body>
@@ -49,17 +55,7 @@
             <h1>Acessorios</h1>
         </section>
 
-        <section id="cards">
-            <div class="card">
-                <img src="../image/ghfx.png" alt="Conjuto Luvas,Chuteira,Bola e Caneleira">
-                <p>Conjuto Luvas,Chuteira,Bola e Caneleira</p>
-                <h2>R$ 300,00</h2>
-                <button class="btn-add"
-                    onclick="adicionarCarrinho(this, 12, 'Conjuto Luvas,Chuteira,Bola e Caneleira', 300.00)">
-                    Adicionar
-                </button>
-            </div>
-        </section> 
+        <section id="cards"></section> 
 
     </main>
 </body>
