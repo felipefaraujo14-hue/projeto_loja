@@ -151,3 +151,9 @@ function finalizarCompra() {
 window.onload = function () {
     mostrarCarrinho();
 };
+
+window.adicionarCarrinho = adicionarCarrinho;
+window.alterarQuantidade = alterarQuantidade;
+window.removerItem = removerItem;
+window.calcularFrete = calcularFrete;
+window.finalizarCompra = finalizarCompra;
