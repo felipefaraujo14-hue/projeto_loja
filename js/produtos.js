@@ -19,10 +19,9 @@ const ListarProdutos = () => {
         divCard.classList.add('card')
 
         // ajusta o caminho da imagem
-        const caminhoImagem =
-            typeof ID_SECAO !== 'undefined'
-                ? '../' + elem.caminho_imagem
-                : elem.caminho_imagem
+        const caminhoImagem = typeof ID_SECAO !== 'undefined'
+        ? '../' + elem.caminho_imagem
+        : elem.caminho_imagem
 
         const imgCard = document.createElement('img')
         imgCard.src = caminhoImagem
