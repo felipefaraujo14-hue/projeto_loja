@@ -2,26 +2,44 @@
 import { produtos } from './lista_produtos.js'
 
 const sectionCards = document.querySelector('#cards')
+const inputPesquisa = document.querySelector('.input-pesquisa')
 
-const ListarProdutos = () => {
+const ListarProdutos = (textoPesquisa = '') => {
 
     if (!sectionCards) return
 
     sectionCards.innerHTML = ''
 
-    const produtosExibir = typeof ID_SECAO !== 'undefined'
-            ? produtos.filter(produto => produto.id_secao === ID_SECAO)
-            : produtos
+    let produtosExibir = typeof ID_SECAO !== 'undefined'
+        ? produtos.filter(produto => produto.id_secao === ID_SECAO)
+        : produtos
+
+    // Filtro da pesquisa
+    if (textoPesquisa !== '') {
+        produtosExibir = produtosExibir.filter(produto =>
+            produto.descricao_produto
+                .toLowerCase()
+                .includes(textoPesquisa.toLowerCase())
+        )
+    }
+
+    if (produtosExibir.length === 0) {
+        sectionCards.innerHTML = `
+            <h2 style="text-align:center; width:100%;">
+                Nenhum produto encontrado.
+            </h2>
+        `
+        return
+    }
 
     produtosExibir.forEach((elem) => {
 
         const divCard = document.createElement('div')
         divCard.classList.add('card')
 
-        // ajusta o caminho da imagem
         const caminhoImagem = typeof ID_SECAO !== 'undefined'
-        ? '../' + elem.caminho_imagem
-        : elem.caminho_imagem
+            ? '../' + elem.caminho_imagem
+            : elem.caminho_imagem
 
         const imgCard = document.createElement('img')
         imgCard.src = caminhoImagem
@@ -31,10 +49,9 @@ const ListarProdutos = () => {
         pCard.textContent = elem.descricao_produto
 
         const h2Card = document.createElement('h2')
-        h2Card.textContent =
-            `R$ ${parseFloat(elem.valor_unitario)
-                .toFixed(2)
-                .replace('.', ',')}`
+        h2Card.textContent = `R$ ${parseFloat(elem.valor_unitario)
+            .toFixed(2)
+            .replace('.', ',')}`
 
         const btnCard = document.createElement('button')
         btnCard.classList.add('btn-add')
@@ -55,6 +72,13 @@ const ListarProdutos = () => {
         divCard.appendChild(btnCard)
 
         sectionCards.appendChild(divCard)
+    })
+}
+
+// Evento da barra de pesquisa
+if (inputPesquisa) {
+    inputPesquisa.addEventListener('input', () => {
+        ListarProdutos(inputPesquisa.value)
     })
 }
 
