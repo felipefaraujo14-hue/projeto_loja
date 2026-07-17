@@ -1,3 +1,4 @@
+//armazena o valor do frete.
 let frete = 0;
 
 function adicionarCarrinho(botao, id, nome, preco) {
@@ -6,13 +7,16 @@ function adicionarCarrinho(botao, id, nome, preco) {
     let card = botao.closest(".card");
     let imagem = card.querySelector("img").getAttribute("src");
 
+      // Recupera o carrinho salvo no LocalStorage.
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
+     // Procura se o produto já existe no carrinho.
     let produto = carrinho.find(p => p.id == id);
 
     if (produto) {
-        produto.quantidade++;
+    /*se existe o produto entao vai aumentar*/  produto.quantidade++;
     } else {
+        //se nao adiciona no carrinho
         carrinho.push({
             id: id,
             nome: nome,
@@ -22,6 +26,7 @@ function adicionarCarrinho(botao, id, nome, preco) {
         });
     }
 
+      //salva novamente o carrinho atualizado
     localStorage.setItem("carrinho", JSON.stringify(carrinho));
 
 }
